@@ -3,7 +3,7 @@
 
 #include "../utils/utils.h"
 
-void uart_init(uint8_t enable_receive);
+void uart_init(uint8_t enable_receive, void (*uart_rx_callback)(uint8_t* pdata, uint16_t size));
 void uart_transmit(const uint8_t *dat, uint16_t size);
 void uart_printf(const char *fmt, ...);
 void uart_irqhandler(void);
