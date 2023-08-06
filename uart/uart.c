@@ -1,5 +1,6 @@
 #include "uart.h"
 
+#ifdef PIC_SERIAL_ENABLED
 static void (*uart_receive_callback)(uint8_t* pdata, uint16_t size) = NULL;
 
 // 参数：是否使能接收
@@ -139,3 +140,4 @@ void uart_irqhandler(void)
 		}
 	}
 }
+#endif /* PIC_SERIAL_ENABLED */
