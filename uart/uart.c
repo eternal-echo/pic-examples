@@ -1,8 +1,11 @@
 #include "uart.h"
 
+static void (*uart_receive_callback)(uint8_t* pdata, uint16_t size) = NULL;
+
 // 参数：是否使能接收
-void uart_init(uint8_t enable_receive)
+void uart_init(uint8_t enable_receive, void (*uart_rx_callback)(uint8_t* pdata, uint16_t size))
 {
+	uart_receive_callback = uart_rx_callback;
 	
 	TRISC7 = 1;
 	TRISC6 = 1;
@@ -125,8 +128,14 @@ void uart_printf(const char *fmt, ...)
 
 void uart_irqhandler(void)
 {
+	uint8_t rx_dat;
 	if(RCIF)
 	{
 		RCIF = 0;
+		rx_dat = RCREG;
+		if(uart_receive_callback != NULL)
+		{
+			uart_receive_callback(&rx_dat, 1);
+		}
 	}
 }

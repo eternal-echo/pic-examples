@@ -9,7 +9,7 @@
 #include "uart/uart.h"
 
 void main(void) {
-	uart_init(1);
+	uart_init(1, NULL);
 	uart_printf("uart example\r\n");
 	uart_printf("unsigned char size: %d\r\n", sizeof(unsigned char));
 	uart_printf("unsigned short size: %d\r\n", sizeof(unsigned short));
