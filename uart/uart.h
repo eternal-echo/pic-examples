@@ -1,5 +1,5 @@
-#ifndef _UART_H__
-#define _UART_H__
+#ifndef __PIC_UART_H__
+#define __PIC_UART_H__
 
 #include "../config.h"
 
@@ -14,4 +14,4 @@ void uart_irqhandler(void);
 
 #endif // PIC_SERIAL_ENABLED
 
-#endif // _UART_H__
+#endif // __PIC_UART_H__

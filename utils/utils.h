@@ -1,5 +1,5 @@
-#ifndef __UTILS_H__
-#define __UTILS_H__
+#ifndef __PIC_UTILS_H__
+#define __PIC_UTILS_H__
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -11,4 +11,4 @@
 
 void delay(uint16_t ms);
 
-#endif // __UTILS_H__
+#endif // __PIC_UTILS_H__
