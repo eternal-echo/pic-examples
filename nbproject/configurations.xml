@@ -5,6 +5,7 @@
       <itemPath>utils/utils.h</itemPath>
       <itemPath>uart/uart.h</itemPath>
       <itemPath>interrupt/interrupt.h</itemPath>
+      <itemPath>config.h</itemPath>
     </logicalFolder>
     <logicalFolder name="SourceFiles" displayName="源文件" projectFiles="true">
       <itemPath>main.c</itemPath>
