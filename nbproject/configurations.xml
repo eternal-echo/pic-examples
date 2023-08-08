@@ -6,12 +6,14 @@
       <itemPath>uart/uart.h</itemPath>
       <itemPath>interrupt/interrupt.h</itemPath>
       <itemPath>config.h</itemPath>
+      <itemPath>adc/adc.h</itemPath>
     </logicalFolder>
     <logicalFolder name="SourceFiles" displayName="源文件" projectFiles="true">
       <itemPath>main.c</itemPath>
       <itemPath>utils/utils.c</itemPath>
       <itemPath>uart/uart.c</itemPath>
       <itemPath>interrupt/interrupt.c</itemPath>
+      <itemPath>adc/adc.c</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript" displayName="链接器文件" projectFiles="true">
     </logicalFolder>
@@ -21,6 +23,7 @@
   </logicalFolder>
   <sourceRootList>
     <Elem>.</Elem>
+    <Elem>../adc.X/adc</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
