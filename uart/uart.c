@@ -127,6 +127,7 @@ void uart_printf(const char *fmt, ...)
 	uart_transmit((const uint8_t *)buf, (uint16_t)strlen(buf));
 }
 
+#ifdef PIC_SERIAL_RX_ENABLED
 void uart_irqhandler(void)
 {
 	uint8_t rx_dat;
@@ -140,4 +141,5 @@ void uart_irqhandler(void)
 		}
 	}
 }
+#endif /* PIC_SERIAL_RX_ENABLED */
 #endif /* PIC_SERIAL_ENABLED */
