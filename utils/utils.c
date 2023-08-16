@@ -62,14 +62,3 @@
 
 // #pragma config statements should precede project file includes.
 // Use project enums instead of #define for ON and OFF.
-
-void delay(uint16_t ms)
-{
-	uint16_t x,y;
-	for(x = ms; x > 0; x--)
-	{
-		for(y = 100; y > 0; y--)
-		{
-		}
-	}
-}

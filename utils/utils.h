@@ -9,6 +9,6 @@
 
 #include <xc.h>
 
-void delay(uint16_t ms);
+#define _XTAL_FREQ 4000000
 
 #endif // __PIC_UTILS_H__
