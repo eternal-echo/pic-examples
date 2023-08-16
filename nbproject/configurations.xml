@@ -7,6 +7,8 @@
       <itemPath>interrupt/interrupt.h</itemPath>
       <itemPath>config.h</itemPath>
       <itemPath>adc/adc.h</itemPath>
+      <itemPath>timer/timer.h</itemPath>
+      <itemPath>gpio/gpio.h</itemPath>
     </logicalFolder>
     <logicalFolder name="SourceFiles" displayName="源文件" projectFiles="true">
       <itemPath>main.c</itemPath>
@@ -14,6 +16,7 @@
       <itemPath>uart/uart.c</itemPath>
       <itemPath>interrupt/interrupt.c</itemPath>
       <itemPath>adc/adc.c</itemPath>
+      <itemPath>timer/timer.c</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript" displayName="链接器文件" projectFiles="true">
     </logicalFolder>
@@ -151,6 +154,9 @@
       <PICkit3PlatformTool>
         <property key="firmware.download.all" value="false"/>
       </PICkit3PlatformTool>
+      <Tool>
+        <property key="firmware.download.all" value="false"/>
+      </Tool>
       <XC8-CO>
         <property key="coverage-enable" value=""/>
         <property key="stack-guidance" value="false"/>

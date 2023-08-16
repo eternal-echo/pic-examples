@@ -11,4 +11,8 @@
 #include "../adc/adc.h"
 #endif // PIC_ADC_ENABLED
 
+#if (defined PIC_TIMER_ENABLED)
+#include "../timer/timer.h"
+#endif // PIC_TIMER_ENABLED
+
 #endif // __PIC_INTERRUPT_H__

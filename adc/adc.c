@@ -4,6 +4,11 @@
 
 static void (*adc_complete_callback)(float val) = NULL;
 
+static void adc_start(void)
+{
+	GODONE = 1; // 开始转换
+}
+
 void adc_init(uint16_t channel, void (*adc_callback)(float val))
 {
 	adc_complete_callback = adc_callback;
@@ -39,7 +44,7 @@ void adc_init(uint16_t channel, void (*adc_callback)(float val))
 float adc_get_val(void)
 {
 	float adc_val;
-	GODONE = 1; // 开始转换
+	adc_start();
 	while(GODONE == 1);
 	adc_val = ADRESH << 8 | ADRESL;
 	adc_val = adc_val * 5 / 1023;
@@ -60,7 +65,6 @@ void adc_irqhandler(void)
 			adc_complete_callback(adc_val);
 		}
 	}
-    GODONE = 1; // 开始转换
 }
 #endif // PIC_ADC_INT_MODE
 #endif // PIC_ADC_ENABLED

@@ -9,4 +9,8 @@ void __interrupt() INTERRUPT_InterruptManager(void)
 #if (defined PIC_ADC_ENABLED) && (defined PIC_ADC_INT_MODE)
     adc_irqhandler();
 #endif // PIC_ADC_ENABLED
+
+#if (defined PIC_TIMER_ENABLED)
+    timer_irqhandler();
+#endif // PIC_TIMER_ENABLED
 }
