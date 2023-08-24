@@ -3,8 +3,12 @@
 
 - [x] 配置项 config.h
 - [x] delay和常用头文件：utils
-- [ ] GPIO：gpio
+- [x] GPIO：gpio
 - [x] 串口：uart
 - [x] 中断：interrupt
-- [ ] 定时器：timer
-- [ ] ADC：adc
+- [x] 定时器：timer
+- [x] ADC：adc
+
+## 注意事项
+LED需要将RC0赋值为1，才能点亮。
+按键S1和S2是一端接地另一端直接连接到RB2和RB3，电路设计有问题无法使用，缺少上拉电阻。
